@@ -1,69 +1,46 @@
 "use client";
 import React from "react";
-import dynamic from "next/dynamic";
 
-const AnimatedNumbers = dynamic(
-  () => {
-    return import("react-animated-numbers");
-  },
-  { ssr: false }
-);
-
-const achievementsList = [
+const internships = [
   {
-    metric: "Projects",
-    value: "100",
-    postfix: "+",
+    company: "Thundertribes pvt ltd",
+    role: "Software developmet Intern",
+    duration: "March 2025 – Present",
+    description:
+      "Working on building responsive UI components with React and Tailwind CSS.",
   },
   {
-    prefix: "~",
-    metric: "Users",
-    value: "100,000",
+    company: "Octanect pvt ltd",
+    role: "Web development Intern",
+    duration: "sept 2024 – Nov 2024",
+    description:
+      "Developed Frontend website using basic HTML, CSS and JavaScript. Collaborated with designers to implement UI/UX improvements.",
   },
-  {
-    metric: "Awards",
-    value: "7",
-  },
-  {
-    metric: "Years",
-    value: "5",
-  },
+ 
 ];
 
-const AchievementsSection = () => {
+const ExperienceSection = () => {
   return (
-    <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
-        {achievementsList.map((achievement, index) => {
-          return (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
-            >
-              <h2 className="text-white text-4xl font-bold flex flex-row">
-                {achievement.prefix}
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={parseInt(achievement.value)}
-                  locale="en-US"
-                  className="text-white text-4xl font-bold"
-                  configs={(_, index) => {
-                    return {
-                      mass: 1,
-                      friction: 100,
-                      tensions: 140 * (index + 1),
-                    };
-                  }}
-                />
-                {achievement.postfix}
-              </h2>
-              <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
-            </div>
-          );
-        })}
+    <div className="py-8 px-4 xl:px-16 sm:py-16">
+      <h2 className="text-3xl font-bold text-white mb-8 text-center">
+        Internship Experience
+      </h2>
+      <div className="space-y-8">
+        {internships.map((intern, index) => (
+          <div
+            key={index}
+            className="bg-[#18191E] border border-[#33353F] p-6 rounded-lg shadow-lg hover:shadow-primary-500/20 transition-shadow"
+          >
+            <h3 className="text-xl font-semibold text-white">
+              {intern.role} <span className="text-primary-500">@ {intern.company}</span>
+            </h3>
+            <p className="text-sm text-gray-400 mb-2">{intern.duration}</p>
+            <p className="text-[#ADB7BE] text-base">{intern.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default AchievementsSection;
+export default ExperienceSection;

@@ -11,8 +11,8 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>Node.js</li>
         <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
+        <li>MySQL</li>
+        <li>Firebase</li>
         <li>JavaScript</li>
         <li>React</li>
       </ul>
@@ -23,8 +23,9 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>SSLC at Adarsha Vidyalaya with 94% </li>
+        <li>PUC at Konnur Science PU college with 95%</li>
+        <li>B.E. in Computer Science at DSCE with 8.7 CGPA</li>
       </ul>
     ),
   },
@@ -33,8 +34,8 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Getting Started with AWS</li>
+        <li>Data Structures and Algorithms(Graphs and Trees)</li>
       </ul>
     ),
   },
@@ -59,8 +60,8 @@ const AboutSection = () => {
           <p className="text-base lg:text-lg">
             I am a full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
+            working with JavaScript, React,  Node.js, Express,MySQL,
+            , HTML, CSS, and Git. I am a quick learner and I am always
             looking to expand my knowledge and skill set. I am a team player and
             I am excited to work with others to create amazing applications.
           </p>
