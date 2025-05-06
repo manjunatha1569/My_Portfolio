@@ -21,7 +21,7 @@ const EmailSection = () => {
           or just want to say hi, feel free to reach out or connect with me!
         </p>
         <div className="text-[#ADB7BE] mb-6">
-          <p><strong>Email:</strong> shreeshail.kohalli@gmail.com</p>
+          <p><strong>Email:</strong> kohallishreeshail@gmail.com</p>
           <p><strong>Phone:</strong> +91 93536 04419</p>
         </div>
         <div className="socials flex flex-row gap-2">
