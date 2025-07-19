@@ -19,16 +19,14 @@ const HeroSection = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
-            <br></br>
+            <br />
             <TypeAnimation
               sequence={[
-                "Shreeshail",
-                1000,
-                "Web Developer",
+                "Data Analyst",
                 1000,
                 "Frontend Developer",
                 1000,
-                "Backend Developer",
+                "Machine Learning Engineer",
                 1000,
               ]}
               wrapper="span"
@@ -37,11 +35,9 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            I am a passionate web developer with a knack for creating stunning
-            and functional websites. I specialize in both frontend and backend
-            development, ensuring a seamless user experience from start to
-            finish. My goal is to bring your ideas to life through code and
-            design.
+            Machine Learning and Data Analytics enthusiast with practical experience in Python, SQL, and Tableau. Skilled
+            in data analysis, visualization, and building predictive models. Committed to solving real-world problems
+            through data-driven insights and continuous learning.
           </p>
           <div>
             <Link
@@ -51,18 +47,19 @@ const HeroSection = () => {
               Hire Me
             </Link>
             <Link
-  href="/resume.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
->
-  <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-    Download CV
-  </span>
-</Link>
-
+              href="/Manjunatha.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
+            >
+              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+                Download CV
+              </span>
+            </Link>
           </div>
         </motion.div>
+
+        {/* RIGHT IMAGE SECTION */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -71,12 +68,12 @@ const HeroSection = () => {
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src="/images/projects/me.jpg"
-              alt="hero image"
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full object-cover"
-
+              src="/images/Manjunatha_image.jpg"
+              alt="Manjunatha profile"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full object-cover"
               width={300}
               height={300}
+              priority
             />
           </div>
         </motion.div>

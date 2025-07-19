@@ -5,15 +5,7 @@ import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
 const projectsData = [
-  {
-    id: 1,
-    title: "React Portfolio Website",
-    description: "A simple portfolio website built with React",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+  
   {
     id: 2,
     title: "Indian culture showcasing website",
@@ -23,15 +15,7 @@ const projectsData = [
     gitUrl: "/",
     previewUrl: "/",
   },
-  {
-    id: 3,
-    title: "Flipkart clone",
-    description: "cloned website of flipkart",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+
   {
     id: 4,
     title: "Student assistance system",

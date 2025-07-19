@@ -3,18 +3,18 @@ import React from "react";
 
 const internships = [
   {
-    company: "Thundertribes pvt ltd",
-    role: "Software developmet Intern",
-    duration: "March 2025 – Present",
+    company: "NUEVERA INFOTECH PVT LTD",
+    role: " Associate Artificial Intelligence Intern",
+    duration: " July– September , 2024",
     description:
-      "Working on building responsive UI components with React and Tailwind CSS.",
-  },
+      "Developed responsive web pages using HTML, CSS, and JavaScript, focusing on clean and consistent layouts to enhance user experience.",
+        },
   {
-    company: "Octanect pvt ltd",
-    role: "Web development Intern",
-    duration: "sept 2024 – Nov 2024",
+    company: " Infosys Springboard x CoLLearn",
+    role: "Sports Analytics Intern(Data Analytics)",
+    duration: "January– March , 2025",
     description:
-      "Developed Frontend website using basic HTML, CSS and JavaScript. Collaborated with designers to implement UI/UX improvements.",
+      "Analyzed sports performance data using Excel and Tableau to identify key metrics and performance trends",
   },
  
 ];

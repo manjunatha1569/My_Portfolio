@@ -8,14 +8,24 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>MySQL</li>
-        <li>Firebase</li>
-        <li>JavaScript</li>
-        <li>React</li>
-      </ul>
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 gap-4 mt-4">
+        {[
+          { name: "Machine Learning", img: "/images/coding.png" },
+          { name: "Data Analytics", img: "/images/analysis.png" },
+          { name: "Python", img: "/images/python.png" },
+          { name: "MySQL", img: "/images/Mysql-database.png" },
+          { name: "R", img: "/images/r.png" },
+          { name: "Tableau", img: "/images/Tableau.png" },
+          { name: "HTML", img: "/images/html.png" },
+          { name: "CSS", img: "/images/css-3.png" },
+          ,
+        ].map((skill) => (
+          <div key={skill.name} className="flex flex-col items-center text-center">
+            <Image src={skill.img} alt={skill.name} width={60} height={60} />
+            <span className="mt-2 text-sm">{skill.name}</span>
+          </div>
+        ))}
+      </div>
     ),
   },
   {
@@ -23,9 +33,9 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>SSLC at Adarsha Vidyalaya with 94% </li>
-        <li>PUC at Konnur Science PU college with 95%</li>
-        <li>B.E. in Computer Science at DSCE with 8.7 CGPA</li>
+        <li>SSLC - Shri Vinayaka High School (91%)</li>
+        <li>PUC - Disha PU College of Science (94%)</li>
+        <li>B.E. in AI & ML - DSCE (8.7 CGPA)</li>
       </ul>
     ),
   },
@@ -34,8 +44,9 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Getting Started with AWS</li>
-        <li>Data Structures and Algorithms(Graphs and Trees)</li>
+        <li>ServiceNow Certified System Administrator</li>
+        <li>ServiceNow Certified Application Developer</li>
+        <li>Google Cloud Career Launchpad Program</li>
       </ul>
     ),
   },
@@ -54,39 +65,27 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image
+          src="/images/about-image.png"
+          alt="About me image"
+          width={500}
+          height={500}
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React,  Node.js, Express,MySQL,
-            , HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            Machine Learning and Data Analytics enthusiast with hands-on experience in Python, SQL, Tableau, and data visualization. Passionate about solving real-world problems using data-driven insights and constantly learning modern tools and technologies.
           </p>
           <div className="flex flex-row justify-start mt-8">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              Education{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              {" "}
-              Certifications{" "}
-            </TabButton>
+            {TAB_DATA.map((tabItem) => (
+              <TabButton
+                key={tabItem.id}
+                selectTab={() => handleTabChange(tabItem.id)}
+                active={tab === tabItem.id}
+              >
+                {tabItem.title}
+              </TabButton>
+            ))}
           </div>
           <div className="mt-8">
             {TAB_DATA.find((t) => t.id === tab).content}

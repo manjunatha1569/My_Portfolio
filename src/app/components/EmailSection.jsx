@@ -21,14 +21,14 @@ const EmailSection = () => {
           or just want to say hi, feel free to reach out or connect with me!
         </p>
         <div className="text-[#ADB7BE] mb-6">
-          <p><strong>Email:</strong> kohallishreeshail@gmail.com</p>
-          <p><strong>Phone:</strong> +91 93536 04419</p>
+          <p><strong>Email:</strong> dhandaragimanju1569@gmail.com</p>
+          <p><strong>Phone:</strong> +91 7411231569</p>
         </div>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/shreeshailk09" target="_blank">
+          <Link href="https://github.com/manjunatha1569" target="_blank">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="https://www.linkedin.com/in/shreeshail-appasab-kohalli-994541314/" target="_blank">
+          <Link href="https://www.linkedin.com/in/manjunatha2004/" target="_blank">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
